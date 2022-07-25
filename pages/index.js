@@ -1,14 +1,11 @@
-import ThreeApp from "../threejs/ThreeApp";
-import { useLayoutEffect } from "react";
-import { useThree } from "../hooks/useThree";
-
+import NavBar from '../components/NavBar'
 export default function Home() {
-  //The argument for useThree is your threejs main class
-  const canvas = useThree(ThreeApp);
+
 
   return (
-    <>
-      <div ref={canvas} style={{ height: "100vh" }} />
-    </>
+    <div className="bg-blue-400 dark:bg-red-500 h-[100vh] w-full">
+      <NavBar />
+      <h1>Hello</h1>
+    </div>
   );
 }

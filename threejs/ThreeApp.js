@@ -14,9 +14,7 @@ export default class Sketch {
     this.renderer.setSize(this.width, this.height);
     this.renderer.setClearColor(0xeeeeee, 1);
     this.renderer.outputEncoding = THREE.sRGBEncoding;
-
     this.container.appendChild(this.renderer.domElement);
-
     this.camera = new THREE.PerspectiveCamera(
       70,
       window.innerWidth / window.innerHeight,
