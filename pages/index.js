@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar'
-export default function Home() {
+import Home from '../components/Home'
+export default function App() {
   function dark() {
     if (localStorage.theme === "dark") {
       document.documentElement.classList.remove('dark')
@@ -11,8 +12,9 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-blue-400 dark:bg-red-500 h-[100vh] w-full">
-      <NavBar />
-    </div>
+    <Home />
+    // <div className="bg-gray-100 dark:bg-purple-700 h-[100vh] w-full">
+    //   <NavBar />
+    // </div>
   );
 }
