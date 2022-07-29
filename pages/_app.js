@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import '../styles/globals.css'
-
+import DarkLightTheme from '../context/darkContext'
 function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
@@ -11,7 +11,9 @@ function MyApp({ Component, pageProps }) {
     }
   })
   return (
-    <Component {...pageProps} />
+    <DarkLightTheme>
+      <Component {...pageProps} />
+    </DarkLightTheme>
   )
 }
 

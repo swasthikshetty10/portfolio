@@ -1,33 +1,54 @@
 
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useContext, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Model from '../../threejs/Model';
 import Hi from '../../threejs/Hi'
 import Setup from '../../threejs/Setup'
+import { DarkLightContext } from '../../context/darkContext';
 export default function Home() {
-    const [angel, setAngle] = useState()
-    useEffect(() => {
 
-    })
+    const [dark, setDark] = useContext(DarkLightContext)
     return (
         <div className={`flex justify-end `}>
 
             <Canvas
+                shadowMap
                 camera={{ position: [2, 0, 12.25], fov: 15 }}
                 style={{
                     backgroundColor: '',
-                    width: '100vw',
+                    width: '50vw',
                     height: '100vh',
                 }}
             >
-                {/* <ambientLight intensity={0.35} /> */}
-                <pointLight color={"ffff00"} position={[0, 4, 3]} intensity={0.4} />
+                {!dark ? <>
+                    <ambientLight intensity={0.5} />
+                    <directionalLight intensity={0.4}
+                        shadow-mapSize-height={512}
+                        shadow-mapSize-width={512}
+                        castShadow
+                    />
+                </>
+                    : <>
+                        <ambientLight intensity={0.02} />
+                        <pointLight
+                            color={[0.7, 0.7, 1.5]}
+                            position={[-2, 4, 4]}
+                            intensity={0.3} />
+                        <spotLight
+                            castShadow
+                            intensity={0.6}
 
-                <directionalLight intensity={0.2} />
+                        />
+                    </>
+                }
+
                 <Suspense fallback={null}>
                     <Setup
-                        position={[0, -4 / 6, 0]} scale={1 / 6} rotation={[0.15, -90.3, -0.05]} />
+                        castShadow
+                        position={[0, -4 / 6, 0]}
+                        scale={1 / 6}
+                        rotation={[0.15, -90.3, -0.05]} />
                 </Suspense>
                 <OrbitControls />
             </Canvas>

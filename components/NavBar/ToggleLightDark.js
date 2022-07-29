@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { DarkLightContext } from '../../context/darkContext';
 
 function ToggleLightDark() {
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useContext(DarkLightContext);
     useEffect(() => {
         if (localStorage.theme === "dark") {
             setDark(true);
@@ -10,12 +11,10 @@ function ToggleLightDark() {
     function toggle() {
         if (localStorage.theme === "dark") {
             setDark(false);
-            localStorage.theme = "light";
-            document.documentElement.classList.remove('dark')
+
         } else {
             setDark(true);
-            localStorage.theme = "dark";
-            document.documentElement.classList.add('dark')
+
         }
     }
     return (

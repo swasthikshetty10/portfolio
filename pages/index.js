@@ -12,8 +12,8 @@ export default function App() {
   }
 
   return (
-    <div className="bg-gray-700 dark:bg-purple-700 h-[100vh] w-full">
-      {/* <NavBar /> */}
+    <div className="bg-blue-100 dark:bg-indigo-900 h-[100vh] w-full">
+      <NavBar />
       <Home />
     </div>
   );
