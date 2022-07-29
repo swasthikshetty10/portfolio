@@ -6,9 +6,11 @@ import Model from '../../threejs/Model';
 import Hi from '../../threejs/Hi'
 import Setup from '../../threejs/Setup'
 import { DarkLightContext } from '../../context/darkContext';
+import useBreakpoints from '../../hooks/useBreakpoint';
 export default function Home() {
 
-    const [dark, setDark] = useContext(DarkLightContext)
+    const [dark, _] = useContext(DarkLightContext)
+    const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
     return (
         <div className={`flex justify-end `}>
 
@@ -16,9 +18,7 @@ export default function Home() {
                 shadowMap
                 camera={{ position: [2, 0, 12.25], fov: 15 }}
                 style={{
-                    backgroundColor: '',
-                    width: '50vw',
-                    height: '100vh',
+                    height: isXs || isSm || isMd ? '50vh' : '100vh',
                 }}
             >
                 {!dark ? <>

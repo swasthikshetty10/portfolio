@@ -3,18 +3,11 @@ import { DarkLightContext } from '../../context/darkContext';
 
 function ToggleLightDark() {
     const [dark, setDark] = useContext(DarkLightContext);
-    useEffect(() => {
-        if (localStorage.theme === "dark") {
-            setDark(true);
-        }
-    }, [])
     function toggle() {
         if (localStorage.theme === "dark") {
             setDark(false);
-
         } else {
             setDark(true);
-
         }
     }
     return (
