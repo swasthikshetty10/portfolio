@@ -12,9 +12,9 @@ export default function App() {
   }
 
   return (
-    <Home />
-    // <div className="bg-gray-100 dark:bg-purple-700 h-[100vh] w-full">
-    //   <NavBar />
-    // </div>
+    <div className="bg-gray-700 dark:bg-purple-700 h-[100vh] w-full">
+      {/* <NavBar /> */}
+      <Home />
+    </div>
   );
 }
