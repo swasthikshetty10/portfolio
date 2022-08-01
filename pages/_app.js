@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import '../styles/globals.css'
 import DarkLightTheme from '../context/darkContext'
+import { ParallaxProvider } from 'react-scroll-parallax'
+
 function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
@@ -11,9 +13,13 @@ function MyApp({ Component, pageProps }) {
     }
   })
   return (
-    <DarkLightTheme>
-      <Component {...pageProps} />
-    </DarkLightTheme>
+    <ParallaxProvider>
+
+      <DarkLightTheme>
+
+        <Component {...pageProps} />
+      </DarkLightTheme>
+    </ParallaxProvider>
   )
 }
 
