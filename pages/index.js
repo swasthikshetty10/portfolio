@@ -12,9 +12,11 @@ export default function App() {
   }
 
   return (
-    <div className="bg-blue-100 dark:bg-indigo-900 h-[100vh] w-full">
+    <div className="antialiased text-slate-700 dark:text-slate-300 bg-white  bg-gradient-to-r from-teal-50 via-sky-100 to-pink-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black    h-[100vh] w-full">
       <NavBar />
       <Home />
+      <div className='h-[100vh]'
+      ></div>
     </div>
   );
 }
