@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar'
 import Home from '../components/Home'
+import About from '../components/About'
 export default function App() {
   function dark() {
     if (localStorage.theme === "dark") {
@@ -15,8 +16,7 @@ export default function App() {
     <div className=" antialiased text-slate-700 dark:text-slate-300 bg-white  bg-gradient-to-r from-teal-50 via-sky-100 to-pink-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black    h-[100vh] w-full">
       <NavBar />
       <Home />
-      <div className='z-[100] bg-gray-300 h-[100vh] w-full'
-      ></div>
+      <About />
     </div>
   );
 }
