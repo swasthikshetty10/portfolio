@@ -22,7 +22,7 @@ function NavBar() {
                     </button>
                 </div>
                 <div className={`${active ? "block" : "hidden"} text-lg text-center justify-between items-center w-full md:flex md:w-auto md:order-1`} >
-                    <ul className="flex flex-col p-2 mt-4 backdrop-blur-lg bg-gray-50/50 rounded-lg border border-sky-300/50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-slate-800/50 md:dark:bg-transparent  dark:border-gray-700/50">
+                    <ul className="flex flex-col p-2 mt-4 backdrop-blur-lg bg-gray-50/50 rounded-lg border border-sky-300/50 md:flex-row  md:space-x-4 lg:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-slate-800/50 md:dark:bg-transparent  dark:border-gray-700/50">
                         {
                             navigations().map((ele, idx) =>
                                 <li className="relative" key={idx}>
