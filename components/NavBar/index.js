@@ -6,21 +6,6 @@ import { ImCross } from "react-icons/im"
 function NavBar() {
     const [active, setActive] = useState(false)
     return (
-        // <div className="z-[999] md:px-14 fixed top-0 w-full p-5 flex justify-center  items-center gap-3 backdrop-blur-md shadow-lg shadow-gray-300/50 dark:shadow-slate-300/10">
-        //     <div className="justify-start flex  items-center gap-6 w-full max-w-screen-xl">
-        //         <div className="text-2xl px-3 font-bold  ">
-        //             Swasthik Shetty
-        //         </div>
-        //         {
-        //             navigations().map((ele, idx) =>
-        //                 <div key={idx} className="text-lg font-semibold cursor-pointer hover:scale-105 transform ease-in-out duration-300 " >
-        //                     {ele.name}
-        //                 </div>
-        //             )
-        //         }
-        //     </div>
-        //     
-        // </div>
         <nav className=" bg-transperent backdrop-blur-xl px-3 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
             <div className="transfor ease-linear duration-300 container flex flex-wrap justify-between items-center mx-auto">
                 <a href="https://flowbite.com/" className="flex items-center">
