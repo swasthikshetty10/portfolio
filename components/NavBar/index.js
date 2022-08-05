@@ -26,7 +26,7 @@ function NavBar() {
                         {
                             navigations().map((ele, idx) =>
                                 <li className="relative" key={idx}>
-                                    <a href={ele.href} onClick={() => { setActive(false) }} className="animated-underline after:bg-sky-700 dark:after:bg-white uppercase   cursor-pointer md:text-lg block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-700 md:p-0 md:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                                    <a href={ele.href} onClick={() => { setActive(false) }} className="animated-underline tracking-widest  md:after:bg-sky-700 md:dark:after:bg-white uppercase   cursor-pointer md:text-lg block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-700 md:p-0 md:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                                         {ele.name}
                                     </a>
                                 </li >

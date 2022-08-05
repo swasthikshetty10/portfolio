@@ -5,15 +5,24 @@ import Waving from "../3dComponents/Waving";
 
 export default function Home() {
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
-
+    const textChange = "hover:text-sky-700  bold dark:hover:text-white duration-300 transform ease-out  "
     return (
-        <div className={`h-[100vh]  flex flex-col-reverse  md:flex-row overflow-hidden justify-center `}>
+        <div className={`h-[100vh]  cursor-pointer flex flex-col-reverse  md:flex-row overflow-hidden justify-center `}>
             <div className="border-t-2 border-slate-200 dark:border-slate-800 md:border-none  z-10   pt-20 h-lg sm:h-auto  text-center sm:text-start sm:pt-40 sm:pl-10 md:pl-20 md:pt-40 flex flex-col gap-10 md:gap-5   ">
                 <Parallax speed={0}>
                     <h1 className="text-5xl sm:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl font-bold ">Hello, </h1>
                 </Parallax>
-                <Parallax speed={-10}>
-                    <h1 className="text-5xl sm:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl font-bold whitespace-nowrap ">I&apos;m Swasthik </h1>
+                <Parallax speed={isXs || isSm ? 0 : -10}>
+                    <h1 className="text-5xl sm:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl font-bold whitespace-nowrap   ">I&apos;m <span className={textChange}>S</span>
+                        <span className={textChange}>w</span>
+                        <span className={textChange}>a</span>
+                        <span className={textChange}>s</span>
+                        <span className={textChange}>t</span>
+                        <span className={textChange}>h</span>
+                        <span className={textChange}>i</span>
+                        <span className={textChange}>k</span>
+
+                    </h1>
                     <TypeAnimation
                         cursor={true}
                         sequence={[

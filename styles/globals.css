@@ -6,7 +6,6 @@ html {
 }
 .animated-underline {
   text-decoration: none;
-  letter-spacing: 0.1em;
   position: relative;
 }
 .animated-underline:after {
