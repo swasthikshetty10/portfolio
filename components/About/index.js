@@ -5,7 +5,8 @@ import { Slide } from 'react-awesome-reveal'
 function About() {
     return (
         <div className=' p-5 md:p-10 text-slate-700 dark:text-slate-300 justify-center  items-center  bg-gradient-to-tr from-teal-50 via-sky-100 to-sky-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black    bg-gray-300  w-full'>
-            <h2 className="py-5 text-center text-5xl font-bold"> About Me</h2>
+            <h2 className="py-5 text-center text-5xl font-bold link-glow"> About Me</h2>
+
             <div className="group space-y-6 md:space-y-8 md:p-10">
                 <Slide as="div" direction='left'>
                     <div className="md:group-hover:-translate-x-10 transform ease-liner delay-50 duration-500  p-5 md:p-10 rounded-xl max-w-screen-lg mx-auto backdrop-blur bg-slate-400/10 dark:bg-slate-800/10">

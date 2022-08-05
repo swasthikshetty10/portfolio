@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  overflow-x: hidden;
+}
+.animated-underline {
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+.animated-underline:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.animated-underline:hover:after {
+  width: 100%;
+  left: 0;
+}

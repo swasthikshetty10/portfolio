@@ -14,9 +14,7 @@ function MyApp({ Component, pageProps }) {
   })
   return (
     <ParallaxProvider>
-
       <DarkLightTheme>
-
         <Component {...pageProps} />
       </DarkLightTheme>
     </ParallaxProvider>
