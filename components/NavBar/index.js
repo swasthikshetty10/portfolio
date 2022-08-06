@@ -17,7 +17,7 @@ function NavBar() {
                     </a>
                 </Link>
                 <div className="flex justify-center items-center gap-3 lg:order-2">
-                    <a className="hidden xl:inline-flex items-center gap-1 font-semibold animated-underline tracking-widest  lg:after:bg-sky-700 lg:dark:after:bg-white uppercase   cursor-pointer lg:text-lg  py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-sky-700 lg:p-0 lg:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                    <a className="hidden lg:inline-flex items-center gap-1 font-semibold animated-underline tracking-widest  lg:after:bg-sky-700 lg:dark:after:bg-white uppercase   cursor-pointer lg:text-lg  py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-sky-700 lg:p-0 lg:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
                         Resume <FiDownload />
                     </a>
                     <ToggleLightDark />

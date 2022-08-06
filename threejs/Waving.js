@@ -73,7 +73,7 @@ export default function Model({ ...props }) {
                         material={materials.Wolf3D_Outfit_Bottom}
                         skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
                     />
-                    <skinnedMesh
+                    <skinnedMesh frustumCulled={false}
                         name="Wolf3D_Body"
                         geometry={nodes.Wolf3D_Body.geometry}
                         material={materials.Wolf3D_Body}

@@ -1,3 +1,4 @@
+import { Slide } from "react-awesome-reveal";
 import { Parallax } from "react-scroll-parallax";
 import TypeAnimation from "react-type-animation";
 import useBreakpoints from "../../hooks/useBreakpoint";
@@ -8,20 +9,80 @@ export default function Home() {
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
 
     return (
-        <div className={` bg-gradient-to-br dark:from-slate-900 dark:via-gray-900 dark:to-black  flex flex-col-reverse  md:flex-row overflow-hidden justify-center `}>
-            <div className="border-t-2 border-slate-200 dark:border-slate-800 md:border-none  z-10   pt-20 h-lg sm:h-auto  text-center sm:text-start sm:pt-40 sm:pl-10 md:pl-20 md:pt-40 flex flex-col gap-10 md:gap-5   ">
-                <a className=" animated-underline  md:after:bg-sky-700 md:dark:after:bg-slate-300 
+        <div className={`mx-auto p-5 md:px-10 bg-gradient-to-br flex-1 dark:from-slate-900 items-center   dark:via-gray-900 dark:to-black  flex flex-col  lg:flex-row overflow-hidden justify-center `}>
+            <div className="w-full md:px-10 space-y-8 md:space-y-12 lg:max-w-[50vw] text-center">
+                <a className=" max-w-min whitespace-nowrap animated-underline  md:after:bg-sky-700 md:dark:after:bg-slate-300 
             tracking-wide hover:tracking-widest duration-300 transform ease-in-out
-             md:after:h-1 text-center text-5xl font-bold link-glow">
+            md:after:h-1 text-center text-5xl font-bold link-glow">
                     My Skills
                 </a>
-                <div className="p-5 md:p-10">
 
+                <div className="group">
+
+                    <div className="mb-1 text-base font-medium text-cyan-800 dark:text-cyan-500">Front end</div>
+                    <div className="w-full overflow-hidden bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                        <Slide direction="left" duration={2000}>
+                            <div className="bg-cyan-700 h-2.5 rounded-full" style={{ width: "95%" }}></div>
+                        </Slide>
+                    </div>
+                    <div className="mb-1  text-base font-medium text-green-700 dark:text-green-500">Back end</div>
+                    <div className="w-full overflow-hidden bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                        <Slide direction="left" duration={2000}>
+                            <div className="bg-green-700 h-2.5 rounded-full dark:bg-green-500" style={{ width: "92%" }}></div>
+                        </Slide>
+                    </div>
+
+                    <div className="mb-1 text-base font-medium text-rose-700 dark:text-rose-500">UI/UX design</div>
+                    <div className="w-full overflow-hidden  bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                        <Slide direction="left" duration={2000}>
+                            <div className="bg-red-700 h-2.5 rounded-full dark:bg-red-500" style={{ width: "70%" }}></div>
+                        </Slide>
+                    </div>
+                </div>
+                <div className="">
+                    <h3>
+                        Here are a few technologies I’ve been working with recently:
+                    </h3>
+                    <div className=" text-start mt-3">
+                        <h3 className="text-lg  ">
+                            Frameworks & Libraries
+                        </h3>
+                        <div className="flex gap-2 flex-wrap mt-3">
+                            <a className="bg-opacity-90 bg-white border-2 border-black/90 text-black/90 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Next JS</a>
+                            <a className="bg-opacity-90 bg-[#282c34] text-[#61dafb]  border-2 border-[#61dafb]  px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">React JS</a>
+                            <a className="bg-opacity-90 bg-[#0c111f] text-[#62baf2]  border-2 border-[#62baf2]  px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Tailwind CSS</a>
+                            <a className="bg-opacity-90 bg-[#026e00] text-[#ffffff]/90  border-2 border-[#ffffff]/70 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Node JS</a>
+                            <a className="bg-opacity-90 bg-white text-green-700 border-2 border-green-700  px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Django</a>
+                            <a className="bg-opacity-90 bg-yellow-500 text-[#000]/90  border-2 border-[#000]/70 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Firebase</a>
+                            <a className="bg-opacity-90 bg-purple-500 text-[#fff]/90  border-2 border-[#fff]/70 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Heroku</a>
+                            <a className="bg-opacity-90 bg-[#4C51BF] text-[#fff]/90  border-2 border-[#fff]/70 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Prisma</a>
+
+                        </div>
+                    </div>
+                    <div className="text-start ">
+                        <h3 className="text-lg  ">
+                            Languages
+                        </h3>
+                        <div className="flex gap-2 flex-wrap mt-3">
+                            <a className="bg-white border-2 border-black/90 text-black/90 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Next JS</a>
+                            <a className="bg-[#282c34] text-[#61dafb]  border-2 border-[#61dafb]  px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">React JS</a>
+                            <a className="bg-[#0c111f] text-[#62baf2]  border-2 border-[#62baf2]  px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Tailwind CSS</a>
+                            <a className="bg-[#026e00] text-[#ffffff]/90  border-2 border-[#ffffff]/70 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Node JS</a>
+                            <a className="bg-white text-green-700 border-2 border-green-700  px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Django</a>
+                            <a className="bg-yellow-500 text-[#000]/90  border-2 border-[#000]/70 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Firebase</a>
+                            <a className="bg-purple-500 text-[#fff]/90  border-2 border-[#fff]/70 px-4 py-2  font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Heroku</a>
+                            <a className="bg-[#4C51BF] text-[#fff]/90  border-2 border-[#fff]/70 px-4 py-2 text-lg font-semibold  whitespace-nowrap max-w-min rounded-xl cursor-pointer">Prisma</a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="z-5 w-full md:w-[50vw] ">
-                <PcRoom />
-            </div>
+            <Slide direction="right" delay={500}>
+
+                <div className="z-5 w-full lg:w-[50vw] ">
+                    <PcRoom />
+                </div>
+            </Slide>
         </div >
     );
 }
