@@ -9,11 +9,11 @@ function NavBar() {
     const [active, setActive] = useState(false)
     return (
         <nav className="group bg-transperent backdrop-blur-xl px-3 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-            <div className="transfor ease-linear duration-300 container flex flex-wrap justify-between items-center mx-auto">
+            <div className="transform ease-linear duration-300 container flex flex-wrap justify-between items-center mx-auto">
                 <Link href="/">
                     <a href="#" className=" flex items-center">
                         <img src="/logo.png" className="group-hover:rotate-90 transition ease-in-out duration-1000 mr-1 h-6 sm:h-10" alt="Swasthik Shettylogo Logo" />
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white tracking-widest ">SWASTHIK SHETTY</span>
+                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white sm:tracking-widest ">SWASTHIK SHETTY</span>
                     </a>
                 </Link>
                 <div className="flex justify-center items-center gap-3 lg:order-2">
