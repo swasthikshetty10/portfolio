@@ -7,37 +7,44 @@ import useBreakpoints from '../../hooks/useBreakpoint'
 function Projects() {
     return (
         <div className='text-center space-y-8 p-5 md:p-10 justify-center items-center bg-gradient-to-tr from-teal-50 via-sky-100 to-sky-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black bg-gray-300 w-full'>
-            <div className="py-8 md:py-4">
+            <div className="md:py-4">
                 <a className="
             animated-underline  md:after:bg-sky-700 md:dark:after:bg-slate-300 
             tracking-wide hover:tracking-widest duration-300 transform ease-in-out
             md:after:h-1  text-center text-5xl font-bold link-glow">
                     Projects
                 </a>
-            </div>
 
+            </div>
+            <p>
+                Here are some of my recent projects
+            </p>
             <ProjectsCard
                 name={<>Portfolio<span className="text-base ml-1 capitalize">(This website)</span></>}
-                tech={["React JS", "Next JS", "Django"]}
+                tech={["Next JS", "Tailwind Css", "Three JS"]}
                 src="/projects/portfolio.png"
-                description={"Amet ut ipsum officia aute. Consectetur aliquip labore est minim id quis voluptate sit aliqua aute nisi do adipisicing. Quis veniam amet proident consectetur ex elit. Qui qui dolore in ea enim do ullamco."}
-            >
-            </ProjectsCard>
-            <ProjectsCard
-                name={<>Portfolio<span className="text-base ml-1 capitalize">(This website)</span></>}
-                tech={["React JS", "Next JS", "Django"]}
-                src="/projects/portfolio.png"
-                description={"Amet ut ipsum officia aute. Consectetur aliquip labore est minim id quis voluptate sit aliqua aute nisi do adipisicing. Quis veniam amet proident consectetur ex elit. Qui qui dolore in ea enim do ullamco."}
-            >
-            </ProjectsCard>
+                description={`I had really fun time creating this website,used react-three-fiber to render 3d model and along the way learnt some new stuffs related to 3d modeling in blender,this website is built using Next JS and Tailwind Css framework.
+                `}
+            />
             <ProjectsCard
                 reverse={true}
-                name={<>Portfolio<span className="text-base ml-1 capitalize">(This website)</span></>}
-                tech={["React JS", "Next JS", "Django"]}
-                src="/projects/portfolio.png"
-                description={"Amet ut ipsum officia aute. Consectetur aliquip labore est minim id quis voluptate sit aliqua aute nisi do adipisicing. Quis veniam amet proident consectetur ex elit. Qui qui dolore in ea enim do ullamco."}
-            >
-            </ProjectsCard>
+                name={<>Incridea<span className="text-base ml-1 capitalize"> website 2022 </span></>}
+                tech={["React JS", "Tailwind Css", "Firebase", "Node JS", "Razorpay"]}
+                src="/projects/incridea.png"
+                description={`
+                Website for the annual techno-cultural fest of my college, called Incridea. worked in team of 5 ,
+                had lot of fun creating website stayed in college had sleepless nights one of the best memories in college so far,
+                The website was visited by over 9000+ people throughout the duration of the fest, we used firebase to store participants data and
+                razorpay for payments  
+                `}
+            />
+            <ProjectsCard
+                name={<>Incridea<span className="text-base ml-1 capitalize"> control panel</span></>}
+                tech={["React JS", "Tailwind Css", "Firebase"]}
+                src="/projects/incrideacp.png"
+                description={`We decided to go with paperless jury for annual techno-cultural fest of my college , called incridea
+                `}
+            />
         </div >
     )
 }
@@ -54,7 +61,7 @@ function ProjectsCard(props) {
                 '>
             <div className={` flex-auto  ${props.reverse ? "md:-translate-x-10" : "md:translate-x-10"}  w-auto  md:p-0`}>
                 <img src={props.src}
-                    className="md:max-w-lg md:grayscale transition-colors transform duration-400 ease-in-out group-hover:grayscale-0 "
+                    className="md:max-w-lg md:grayscale transition-colors transform duration-100 ease-in-out group-hover:grayscale-0 "
                 />
             </div>
             <div className={`min-w-fit order-first   ${props.reverse ? "md:order-first md:translate-x-10" : " md:text-end md:order-2 md:-translate-x-10"}`}>
