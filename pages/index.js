@@ -2,6 +2,7 @@ import NavBar from '../components/NavBar'
 import Home from '../components/Home'
 import About from '../components/About'
 import Skills from '../components/Skills'
+import Projects from '../components/Projects'
 export default function App() {
   function dark() {
     if (localStorage.theme === "dark") {
@@ -18,6 +19,7 @@ export default function App() {
       <Home />
       <About />
       <Skills />
+      <Projects />
     </div>
   );
 }

@@ -16,9 +16,7 @@ export default function Home() {
             md:after:h-1 text-center text-5xl font-bold link-glow">
                     My Skills
                 </a>
-
                 <div className="group">
-
                     <div className="mb-1 text-base font-medium text-cyan-800 dark:text-cyan-500">Front end</div>
                     <div className="w-full overflow-hidden bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
                         <Slide direction="left" duration={2000}>
