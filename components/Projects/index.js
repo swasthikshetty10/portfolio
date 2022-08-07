@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { Fade } from 'react-awesome-reveal'
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
@@ -11,20 +12,22 @@ function Projects() {
                 <a className="
             animated-underline  md:after:bg-sky-700 md:dark:after:bg-slate-300 
             tracking-wide hover:tracking-widest duration-300 transform ease-in-out
-            md:after:h-1  text-center text-5xl font-bold link-glow">
-                    Projects
+            md:after:h-1   text-center text-5xl font-bold link-glow">
+                    My Works
                 </a>
-
+                <p className='mt-3 md:text-lg'>
+                    Here are somethings I&#39;ve built recently
+                </p>
             </div>
-            <p>
-                Here are some of my recent projects
-            </p>
+
             <ProjectsCard
                 name={<>Portfolio<span className="text-base ml-1 capitalize">(This website)</span></>}
                 tech={["Next JS", "Tailwind Css", "Three JS"]}
                 src="/projects/portfolio.png"
-                description={`I had really fun time creating this website,used react-three-fiber to render 3d model and along the way learnt some new stuffs related to 3d modeling in blender,this website is built using Next JS and Tailwind Css framework.
+                description={`I really had fun time creating this website, used react-three-fiber to render 3d model and along the way learnt some new stuffs related to 3d modeling in blender,this website is built using Next JS and Tailwind Css framework.
                 `}
+                link="/"
+                github="https://github.com/swasthikshetty10/portfolio"
             />
             <ProjectsCard
                 reverse={true}
@@ -37,14 +40,45 @@ function Projects() {
                 The website was visited by over 9000+ people throughout the duration of the fest, we used firebase to store participants data and
                 razorpay for payments  
                 `}
+                github="https://github.com/BharathMKulkarni/Incridea22"
+                link="https://incridea.in"
             />
             <ProjectsCard
                 name={<>Incridea<span className="text-base ml-1 capitalize"> control panel</span></>}
                 tech={["React JS", "Tailwind Css", "Firebase"]}
                 src="/projects/incrideacp.png"
-                description={`We decided to go with paperless jury for annual techno-cultural fest of my college , called incridea
+                description={`We decided to go with paperless jury for annual techno-cultural fest of my college ,
+                called incridea. this is dashboard for event organizers to scan participants and register them to the events and also get their information,
+                judges dashboard to give scores to participants and finalize the result, and dashboard for jury to monitor all events in realtime
                 `}
+                github="https://github.com/swasthikshetty10/incridea22-control-panel"
             />
+            <ProjectsCard
+                reverse={true}
+                name={<>Farmoid Robotech<span className="text-base ml-1 capitalize"> </span></>}
+                tech={["Next JS", "Tailwind Css", "Prisma(ORM)", "Postgresql"]}
+                src="/projects/farmoid.png"
+                description={`Built full website for farmoid Robotech Pvt. Ltd.(an agritech startup), used Prisam ORM to integrate postgresql with NextJS
+                `}
+                link="https://farmoidrobotech.com"
+            />
+
+            < ProjectsCard
+
+                name={<> TechlifeJournal <span span className="text-base ml-1 capitalize" > blog website</span ></>}
+                tech={["Next JS", "Tailwind Css", "Django(DRF)", "Postgresql"]}
+                src="/projects/techlifejournal.png"
+                description={`Website for posting blogs,user can register and post blogs using markdown language, built using Django rest framework and NextJS 
+                `}
+                github="https://github.com/techlifejournal/techlifejournal"
+                link="https://techlifejournal.com/"
+            />
+            <Link href="https://github.com/swasthikshetty10">
+                <a target="_blank" className='text-xl '>To see more, head over to my <span className="inline-flex gap-2 items-center font-semibold italic cursor-pointer ease-in-out duration-300 hover:text-sky-800 hover:dark:text-sky-300">
+                    Github profile!
+                    <FaGithub />
+                </span></a>
+            </Link>
         </div >
     )
 }
@@ -65,10 +99,12 @@ function ProjectsCard(props) {
                 />
             </div>
             <div className={`min-w-fit order-first   ${props.reverse ? "md:order-first md:translate-x-10" : " md:text-end md:order-2 md:-translate-x-10"}`}>
-                <Parallax speed={isXs || isSm ? 0 : 13} className="space-y-2">
-                    <h2 className="hover:text-sky-800 dark:hover:text-sky-300 cursor-pointer font-semibold text-2xl uppercase  tracking-wider md:order-2">{props.name}</h2>
+                <Parallax speed={isXs || isSm ? 0 : 10} className="space-y-2">
+                    <Link href={props.link ? props.link : props.github}>
+                        <a target="_blank" className="hover:text-sky-800 dark:hover:text-sky-300 cursor-pointer font-semibold text-2xl uppercase  tracking-wider md:order-2">{props.name}</a>
+                    </Link>
                     <div className='space-x-3  md:tracking-wide  text-sm '>
-                        {props.tech.map((ele, i) => <a key={i}>{ele}</a>)}
+                        {props.tech.map((ele, i) => <a className='whitespace-nowrap' key={i}>{ele}</a>)}
                     </div>
                     <div className={`${props.reverse ? "md:-mr-28 lg:-mr-26 xl:-mr-10" : "md:-ml-28 lg:-ml-26 xl:-ml-10"}
                 md:border-2 border-sky-700 /20 md:bg-gradient-to-tl md:text-sm from-cyan-200/40 to-gray-100/90 dark:from-slate-900/70 dark:to-gray-900/70   ease-in-out  dark:border-slate-500/50
@@ -76,13 +112,21 @@ function ProjectsCard(props) {
                         {props.description}
                     </div>
                     <div className="inline-flex gap-3 pt-3 text-2xl ">
-                        <a href={props.github}>
-                            <FaGithub className="hover:text-sky-800 dark:hover:text-sky-300  " />
-                        </a>
-                        <a href={props.link}>
-                            <FaExternalLinkAlt className="hover:text-sky-800 dark:hover:text-sky-300 " />
-                        </a>
-
+                        {props.github &&
+                            <Link href={props.github}>
+                                <a target="_blank">
+                                    <FaGithub className="hover:text-sky-800 dark:hover:text-sky-300  " />
+                                </a>
+                            </Link>
+                        }
+                        {
+                            props.link &&
+                            <Link href={props.link}>
+                                <a target="_blank">
+                                    <FaExternalLinkAlt className="hover:text-sky-800 dark:hover:text-sky-300 " />
+                                </a>
+                            </Link>
+                        }
                     </div>
                 </Parallax>
             </div >
