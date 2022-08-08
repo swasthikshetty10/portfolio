@@ -1,12 +1,12 @@
 import React from 'react'
-import { Fade } from 'react-awesome-reveal'
+import { Fade, Slide } from 'react-awesome-reveal'
 
 function About() {
     return (
-        <div className='
-            text-center p-5 md:p-10 justify-center items-center w-full
+        <div className='relative
+             p-5 md:p-10 justify-center items-center w-full
             bg-gradient-to-tr from-teal-50 via-sky-100 to-sky-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black bg-gray-300'>
-            <div className="py-8 md:py-4">
+            <div className="py-8 md:py-4 text-center">
                 <a className="
                 animated-underline  md:after:bg-sky-700 md:dark:after:bg-slate-300 
                 tracking-wide hover:tracking-widest duration-300 transform ease-in-out
@@ -37,6 +37,68 @@ function About() {
                     </div>
                 </Fade >
             </div>
+
+            <div className="z-10 flex flex-wrap  justify-start md:justify-evenly mt-10  ">
+
+                <Slide direction="left">
+
+                    <div>
+                        <div className="md:py-4 ">
+                            <a className="
+            md:after:bg-sky-700 md:dark:after:bg-slate-300 
+            tracking-wide hover:tracking-widest duration-300 transform ease-in-out
+            md:after:h-1   text-center text-3xl font-bold link-glow">
+                                Experience
+                            </a>
+                        </div>
+                        <ol className="  border-l relative mt-10 border-slate-300 dark:border-slate-600">
+                            <li className="-mt-6 mb-10 ml-4">
+                                <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
+                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Nov 2021 - Present</time>
+                                <h3 className="text-lg font-semibold ">Farmoid Robotech Pvt. Ltd.</h3>
+                                <p className="text-base font-norm opacity-75">Full Stack web Developer</p>
+                            </li>
+                            <li className="-mt-6 mb-10 ml-4">
+                                <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
+                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Oct 2021 - Present</time>
+                                <h3 className="text-lg font-semibold ">Inspirante Technologies Pvt. Ltd.</h3>
+                                <p className="text-base font-norm opacity-75">Web Development Intern</p>
+                            </li>
+                        </ol>
+                    </div>
+                </Slide>
+                <Slide direction="right">
+                    <div>
+                        <div className="md:py-4 ">
+                            <a className="
+              md:after:bg-sky-700 md:dark:after:bg-slate-300 
+            tracking-wide hover:tracking-widest duration-300 transform ease-in-out
+            md:after:h-1   text-center text-3xl font-bold link-glow">
+                                Education
+                            </a>
+                            <span className="h-1 bg-black w-full min-w-max"></span>
+                        </div>
+                        <ol className="  border-l relative mt-10 border-slate-300 dark:border-slate-600">
+                            <li className="-mt-6 mb-10 ml-4">
+                                <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
+                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">2020 - Present</time>
+                                <h3 className="text-lg font-semibold ">B.E (computer Science and Engineering)
+                                </h3>
+                                <p className="text-base font-norm opacity-75">NMAM Institute of Technology , Nitte</p>
+                                <p className="text-sm font-norm opacity-75">recent CGPA : 8.98/10</p>
+                            </li>
+                            <li className="-mt-6 mb-10 ml-4">
+                                <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
+                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">2018 - 2020</time>
+                                <h3 className="text-lg font-semibold ">Pre-University Education</h3>
+                                <p className="text-base font-norm opacity-75">DR N.S.A.M PU C0llege, nitte</p>
+                                <p className="text-sm font-norm opacity-75">Aggregate percentage: 82%</p>
+                            </li>
+                        </ol>
+                    </div>
+                </Slide>
+            </div>
+
         </div >
     )
 }
