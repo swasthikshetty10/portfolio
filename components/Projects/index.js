@@ -86,7 +86,7 @@ function Projects() {
 export default Projects
 
 function ProjectsCard(props) {
-    const { isXs, isSm } = useBreakpoints();
+    const { isXs, isSm, isMd } = useBreakpoints();
     return (<div className="text-start  md:text-lg md:px-5 group space-y-6 md:space-y-8 md:p-10">
         <div className='flex  flex-col  gap-5 md:gap-0 md:max-w-sm md:px-10  lg:max-w-md xl:max-w-xl group  mx-auto md:flex-row items-center justify-center
                     border-2 border-sky-500/50 bg-gradient-to-tl text-base from-cyan-100/40 to-gray-100/50 dark:from-slate-900/50 dark:to-gray-900/50   ease-in-out  dark:border-slate-500/50
@@ -103,7 +103,7 @@ function ProjectsCard(props) {
                     <Link href={props.link ? props.link : props.github}>
                         <a target="_blank" className="hover:text-sky-800 dark:hover:text-sky-300 cursor-pointer font-semibold text-2xl uppercase  tracking-wider md:order-2">{props.name}</a>
                     </Link>
-                    <div className='space-x-3  md:tracking-wide  text-sm '>
+                    <div className='gap-3  md:tracking-wide inline-flex  justify-start  flex-wrap  text-sm '>
                         {props.tech.map((ele, i) => <a className='whitespace-nowrap' key={i}>{ele}</a>)}
                     </div>
                     <div className={`${props.reverse ? "md:-mr-28 lg:-mr-26 xl:-mr-10" : "md:-ml-28 lg:-ml-26 xl:-ml-10"}
