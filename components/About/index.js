@@ -91,7 +91,7 @@ function About() {
                                 <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
                                 <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">2018 - 2020</time>
                                 <h3 className="text-lg font-semibold ">Pre-University Education</h3>
-                                <p className="text-base font-norm opacity-75">DR N.S.A.M PU C0llege, nitte</p>
+                                <p className="text-base font-norm opacity-75">DR N.S.A.M PU College, Nitte</p>
                                 <p className="text-sm font-norm opacity-75">Aggregate percentage: 82%</p>
                             </li>
                         </ol>

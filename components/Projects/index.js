@@ -101,7 +101,7 @@ function ProjectsCard(props) {
             <div className={`min-w-fit order-first   ${props.reverse ? "md:order-first md:translate-x-10" : " md:text-end md:order-2 md:-translate-x-10"}`}>
                 <Parallax speed={isXs || isSm ? 0 : 10} className="space-y-2">
                     <Link href={props.link ? props.link : props.github}>
-                        <a target="_blank" className="hover:text-sky-800 dark:hover:text-sky-300 cursor-pointer font-semibold text-2xl uppercase  tracking-wider md:order-2">{props.name}</a>
+                        <h2 target="_blank" className="hover:text-sky-800 dark:hover:text-sky-300 cursor-pointer font-semibold text-2xl uppercase  tracking-wider md:order-2">{props.name}</h2>
                     </Link>
                     <div className='gap-3  md:tracking-wide inline-flex  justify-start  flex-wrap  text-sm '>
                         {props.tech.map((ele, i) => <a className='whitespace-nowrap' key={i}>{ele}</a>)}
