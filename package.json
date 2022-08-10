@@ -10,6 +10,8 @@
   "dependencies": {
     "@react-three/drei": "^9.17.3",
     "@react-three/fiber": "^8.2.2",
+    "axios": "^0.27.2",
+    "discord-webhook-node": "^1.1.8",
     "next": "12.2.3",
     "react": "^18.2.0",
     "react-awesome-reveal": "^3.8.1",
