@@ -2,11 +2,11 @@
 
 function navigations() {
     return [
-        { name: "Home", route: "/#" },
-        { name: "About", route: "/#" },
-        { name: "Skills", route: "/#" },
-        { name: "Work", route: "/#" },
-        { name: "Contact", route: "/#" },
+        { name: "Home", route: "home" },
+        { name: "About", route: "about" },
+        { name: "Skills", route: "skills" },
+        { name: "Work", route: "work" },
+        { name: "Contact", route: "contact" },
     ]
 }
 

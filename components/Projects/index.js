@@ -7,7 +7,7 @@ import useBreakpoints from '../../hooks/useBreakpoint'
 
 function Projects() {
     return (
-        <div className='text-center space-y-8 p-5 md:p-10 justify-center items-center bg-gradient-to-tr from-teal-50 via-sky-100 to-sky-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black bg-gray-300 w-full'>
+        <section id="work" className='text-center space-y-8 p-5 md:p-10 justify-center items-center bg-gradient-to-tr from-teal-50 via-sky-100 to-sky-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black bg-gray-300 w-full'>
             <div className="md:py-4">
                 <a className="
             animated-underline  md:after:bg-sky-700 md:dark:after:bg-slate-300 
@@ -79,7 +79,7 @@ function Projects() {
                     <FaGithub />
                 </span></a>
             </Link>
-        </div >
+        </ section>
     )
 }
 

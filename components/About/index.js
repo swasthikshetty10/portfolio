@@ -3,7 +3,7 @@ import { Fade, Slide } from 'react-awesome-reveal'
 
 function About() {
     return (
-        <div className='relative overflow-x-hidden
+        <div id="about" className='relative overflow-x-hidden
              p-5 md:p-10 justify-center items-center w-full
             bg-gradient-to-tr from-teal-50 via-sky-100 to-sky-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black bg-gray-300'>
             <div className="py-8 md:py-4 text-center">

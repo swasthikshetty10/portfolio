@@ -9,7 +9,7 @@ export default function Home() {
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
 
     return (
-        <div className={`mx-auto p-5 md:px-10 bg-gradient-to-br flex-1 dark:from-slate-900 items-center   dark:via-gray-900 dark:to-black  flex flex-col  lg:flex-row overflow-hidden justify-center `}>
+        <div id="skills" className={`mx-auto p-5 md:px-10 bg-gradient-to-br flex-1 dark:from-slate-900 items-center   dark:via-gray-900 dark:to-black  flex flex-col  lg:flex-row overflow-hidden justify-center `}>
             <div className=" xl:ml-14 md:px-10 space-y-8 md:space-y-12 lg:max-w-[50vw] text-center">
                 <a className=" max-w-min whitespace-nowrap animated-underline  md:after:bg-sky-700 md:dark:after:bg-slate-300 
             tracking-wide hover:tracking-widest duration-300 transform ease-in-out
