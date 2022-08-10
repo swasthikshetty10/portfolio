@@ -3,7 +3,7 @@ import TypeAnimation from "react-type-animation";
 import useBreakpoints from "../../hooks/useBreakpoint";
 import Waving from "../3dComponents/Waving";
 
-export default function Home() {
+export default function Home({ setLoading }) {
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
     const textChange = "hover:text-sky-700 bold dark:hover:text-white duration-300 transform ease-out  "
     return (
@@ -42,7 +42,7 @@ export default function Home() {
                 </Parallax>
             </div>
             <div className="z-5 w-full md:w-[50vw] ">
-                <Waving />
+                <Waving setLoading={setLoading} />
             </div>
         </section >
     );

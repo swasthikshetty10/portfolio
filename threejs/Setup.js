@@ -11,6 +11,7 @@ export default function Model({ ...props }) {
     const { actions } = useAnimations(animations, group);
     useEffect(() => {
         actions["Armature|mixamo.com|Layer0"].play();
+        props.setLoading(false);
     });
     return (
         <group ref={group} {...props} dispose={null}>

@@ -1,14 +1,15 @@
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
 export default function Model({ ...props }) {
     const group = useRef();
     const { nodes, materials, animations } = useGLTF("/waving.glb");
     const { actions } = useAnimations(animations, group);
+
     useEffect(() => {
         actions["Armature|mixamo.com|Layer0"].play();
-
+        props.setLoading(false);
     });
     return (
         <group ref={group} {...props} dispose={null}>

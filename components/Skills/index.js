@@ -5,7 +5,7 @@ import useBreakpoints from "../../hooks/useBreakpoint";
 import PcRoom from "../3dComponents/PcRoom";
 import Waving from "../3dComponents/Waving";
 
-export default function Home() {
+export default function Skills({ setLoading }) {
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
 
     return (
@@ -75,7 +75,7 @@ export default function Home() {
             <Slide direction="right" delay={500}>
 
                 <div className="z-5 w-full lg:w-[50vw] ">
-                    <PcRoom />
+                    <PcRoom setLoading={setLoading} />
                 </div>
             </Slide>
         </div >

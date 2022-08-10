@@ -5,7 +5,7 @@ import Setup from '../../threejs/Setup'
 import { DarkLightContext } from '../../context/darkContext';
 import useBreakpoints from '../../hooks/useBreakpoint';
 
-export default function PcRoom() {
+export default function PcRoom({ setLoading }) {
     const [dark, _] = useContext(DarkLightContext)
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
     return (
@@ -39,6 +39,7 @@ export default function PcRoom() {
 
             <Suspense fallback={null}>
                 <Setup
+                    setLoading={setLoading}
                     shadowMap
                     position={[0, -4 / 6, 0]}
                     scale={1 / 6}
