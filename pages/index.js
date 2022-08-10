@@ -24,7 +24,7 @@ export default function App() {
   }, [loadingSetup, loadingWave])
   return (<div>
     {(loadingWave || loadingSetup) && <Loader />}
-    <div className={`relative overflow-x-hidden antialiased text-slate-700 dark:text-slate-300 bg-white  bg-gradient-to-r from-teal-50 via-sky-100 to-pink-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black   w-full`} >
+    <div className={`relative overflow-x-hidden antialiased text-slate-700 dark:text-slate-300   bg-gradient-to-r from-teal-50 via-sky-100 to-pink-50 dark:from-slate-900/95 dark:via-slate-900 dark:to-black   w-full`} >
       <NavBar />
       <Home setLoading={setLoadingWave} />
       <About />
