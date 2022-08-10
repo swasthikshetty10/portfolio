@@ -3,9 +3,9 @@ export const DarkLightContext = createContext();
 
 export default function DarkLightTheme(props) {
 
-    const [isDark, setDark] = useState(null);
+    const [isDark, setDark] = useState(true);
     useEffect(() => {
-        setDark(localStorage.theme === "dark" ? true : false)
+        setDark(localStorage.theme === "light" ? false : true)
     }, [])
     useEffect(() => {
         if (isDark) {
