@@ -20,7 +20,7 @@ function Experience() {
     }
     return (
 
-        <section id="contact" className='p-5 md:p-10 bg-gradient-to-br  w-full'>
+        <section id="contact" className='contact p-5 md:p-10 bg-gradient-to-br  w-full'>
             <form onSubmit={submitHandler} className="group p-2 justify-center items-center md:items-start gap-5 md:gap-10 lg:gap-14 flex flex-col md:flex-row md:p-10 mx-auto min-w-fit">
                 <div className="space-y-5 text-center">
                     <h2 className='text-4xl font-semibold'>Let&#39;s Get In touch</h2>

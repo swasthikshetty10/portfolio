@@ -34,9 +34,9 @@ function NavBar() {
                         {
                             navigations().map((ele, idx) =>
                                 <li className="relative" key={idx}>
-                                    <a onClick={() => { setActive(false) }} className="animated-underline tracking-widest  lg:after:bg-sky-700 lg:dark:after:bg-white uppercase   cursor-pointer lg:text-lg block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-sky-700 lg:p-0 lg:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                                    <Scroll to={ele.route} activeClass="active" smooth={true} spy={true} offset={-50} duration={1000} onClick={() => { setActive(false) }} className="animated-underline tracking-widest  lg:after:bg-sky-700 lg:dark:after:bg-white uppercase   cursor-pointer lg:text-lg block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-sky-700 lg:p-0 lg:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
                                         {ele.name}
-                                    </a>
+                                    </Scroll>
                                 </li >
                             )
                         }
