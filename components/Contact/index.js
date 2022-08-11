@@ -25,10 +25,10 @@ function Experience() {
                 <div className="space-y-5 text-center">
                     <h2 className='text-4xl font-semibold'>Let&#39;s Get In touch</h2>
                     <div className="text-3xl flex flex-wrap justify-center gap-5 ">
-                        <Link href="#"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><HiOutlineMail /></a></Link>
-                        <Link href="#"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><FaWhatsapp /></a></Link>
-                        <Link href="#"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><FaLinkedin /></a></Link>
-                        <Link href="#"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><FaGithub /></a></Link>
+                        <Link href="mailto:swasthikshetty10902@gmail.com"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><HiOutlineMail /></a></Link>
+                        <Link href="https://wa.link/xcfy4e"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><FaWhatsapp /></a></Link>
+                        <Link href="https://www.linkedin.com/in/swasthikshetty10/"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><FaLinkedin /></a></Link>
+                        <Link href="https://github.com/swasthikshetty10"><a className="hover:scale-110 transition duration-400 ease-in-out" target="_blank"><FaGithub /></a></Link>
                     </div>
                     <Zoom delay={300}>
                         <img className="hidden md:block pt-6 w-full max-w-sm " src="/contact.svg" />
