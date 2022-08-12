@@ -14,7 +14,6 @@ function Experience() {
         console.log(e.target.values)
         setSending(true);
         // const res = await axios.post("/api/contact", contact)
-
         axios.post("https://api-swasthikshetty10.herokuapp.com/api/contact/", { ...contact, phone_no: "0000" }, 5000)
             .then(res => {
                 setSending(false);

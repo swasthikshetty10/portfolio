@@ -2,7 +2,7 @@ import { Parallax } from "react-scroll-parallax";
 import TypeAnimation from "react-type-animation";
 import useBreakpoints from "../../hooks/useBreakpoint";
 import Waving from "../3dComponents/Waving";
-
+import { Link as Scroll } from "react-scroll"
 export default function Home({ setLoading }) {
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
     const textChange = "hover:text-sky-700 bold dark:hover:text-white duration-300 transform ease-out  "
@@ -37,7 +37,7 @@ export default function Home({ setLoading }) {
                         repeat={Infinity}
                     />
                     <div className="py-6 md:py-10">
-                        <a className="rounded-2xl md:rounded-3xl p-3 sm:p-5 border-2 md:border-4 cursor-pointer select-none text-xl sm:text-2xl font-semibold border-sky-600 hover:bg-gradient-to-l from-cyan-200/50 to-pink-100/50 dark:from-slate-900/50 dark:to-blue-900/50  transform ease-in-out duration-500 dark:border-slate-500 hover:text-2xl  sm:hover:text-3xl">Contact Me</a>
+                        <Scroll to="contact" activeClass="active" smooth={true} spy={true} offset={-50} duration={1000} className="rounded-2xl md:rounded-3xl p-3 sm:p-5 border-2 md:border-4 cursor-pointer select-none text-xl sm:text-2xl font-semibold border-sky-600 hover:bg-gradient-to-l from-cyan-200/50 to-pink-100/50 dark:from-slate-900/50 dark:to-blue-900/50  transform ease-in-out duration-500 dark:border-slate-500 hover:text-2xl  sm:hover:text-3xl">Contact Me</Scroll>
                     </div>
                 </Parallax>
             </div>
