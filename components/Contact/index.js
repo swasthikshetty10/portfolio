@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { HiOutlineMail } from "react-icons/hi"
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { AiOutlineLoading3Quarters } from "react-icons/ai"
@@ -7,18 +7,27 @@ import { Zoom } from 'react-awesome-reveal'
 import axios from 'axios'
 function Experience() {
     const [sending, setSending] = useState(false);
+    const SuccessDiv = useRef();
     const [contact, setContact] = useState({ name: "", email: "", message: "" })
-    const submitHandler = async (e) => {
+    const submitHandler = (e) => {
         e.preventDefault();
         console.log(e.target.values)
         setSending(true);
-        const res = await axios.post("/api/contact", contact)
-        if (res.status == 200) {
-            setContact({ name: "", email: "", message: "" })
-        }
-        setSending(false);
+        // const res = await axios.post("/api/contact", contact)
+
+        axios.post("https://api-swasthikshetty10.herokuapp.com/api/contact/", { ...contact, phone_no: "0000" }, 5000)
+            .then(res => {
+                setSending(false);
+                setContact({ name: "", email: "", message: "" })
+                SuccessDiv.current.innerHTML = `<p class="font-semibold text-green-600">Thankyou your message has been sent ✔️ </p>`
+            })
+            .catch(err => {
+                setSending(false);
+                SuccessDiv.current.innerHTML = `<p class="font-semibold text-red-600">Sorry something went wrong Try again</p>`
+            })
     }
     return (
+
 
         <section id="contact" className='contact p-5 md:p-10 bg-gradient-to-br  w-full'>
             <form onSubmit={submitHandler} className="group p-2 justify-center items-center md:items-start gap-5 md:gap-10 lg:gap-14 flex flex-col md:flex-row md:p-10 mx-auto min-w-fit">
@@ -59,7 +68,11 @@ function Experience() {
                     <div >
                         <button disabled={sending} className="disabled:opacity-70  w-full rounded-2xl md:rounded-3xl p-3  border-2 md:border-4 cursor-pointer select-none text-xl sm:text-xl font-semibold border-sky-600 hover:bg-gradient-to-l from-cyan-200/50 to-pink-100/50 dark:from-slate-900/50 dark:to-blue-900/50  transform ease-in-out duration-500 dark:border-slate-500   inline-flex justify-center gap-2 items-center">{sending ? <> <AiOutlineLoading3Quarters className="animate-spin" />  Sending </> : "Send Message"}</button>
                     </div>
+                    <div className=" text-center mt-3" ref={SuccessDiv}>
+
+                    </div>
                 </div>
+
             </form>
         </section>
     )
