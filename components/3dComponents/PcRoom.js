@@ -24,13 +24,14 @@ export default function PcRoom({ setLoading }) {
                 />
             </>
                 : <>
-                    <ambientLight intensity={0.02} />
+                    <ambientLight intensity={0.1} />
                     <pointLight
-                        color={[0.7, 0.7, 1.5]}
+                        color={[0.7, 0.7, 0.7]}
                         position={[-2, 4, 4]}
                         intensity={0.3} />
                     <spotLight
                         castShadow
+                        position={[-0.3, 0.8, 0.31]}
                         intensity={0.6}
 
                     />

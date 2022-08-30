@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export default function Model({ ...props }) {
     const group = useRef();
-    const { nodes, materials, animations } = useGLTF("/isometric.glb");
+    const { nodes, materials, animations } = useGLTF("/setup.glb");
     const { actions } = useAnimations(animations, group);
     useEffect(() => {
         actions["Armature|mixamo.com|Layer0"].play();
@@ -16,12 +16,6 @@ export default function Model({ ...props }) {
     return (
         <group ref={group} {...props} dispose={null}>
             <group name="Scene">
-                <group
-                    name="ReflectionPlane"
-                    position={[-1.98, 3.79, -3.4]}
-                    rotation={[0, 0, -Math.PI / 2]}
-                    scale={[3.15, 0.93, 0.77]}
-                />
                 <group
                     name="Wireless_Mouse"
                     position={[-2.72, 2.99, -0.33]}
@@ -76,41 +70,6 @@ export default function Model({ ...props }) {
                         rotation={[Math.PI / 2, 0, 0]}
                         scale={0.02}
                     />
-                    <group
-                        name="MouseThermaltakeBlack003"
-                        position={[0, 0.01, -0.01]}
-                        rotation={[Math.PI / 2, 0, 0]}
-                        scale={0.02}
-                    >
-                        <mesh
-                            name="MouseThermaltakeBlack003_1"
-                            castShadow
-                            receiveShadow
-                            geometry={nodes.MouseThermaltakeBlack003_1.geometry}
-                            material={materials["main body"]}
-                        />
-                        <mesh
-                            name="MouseThermaltakeBlack003_2"
-                            castShadow
-                            receiveShadow
-                            geometry={nodes.MouseThermaltakeBlack003_2.geometry}
-                            material={materials["Material.007"]}
-                        />
-                        <mesh
-                            name="MouseThermaltakeBlack003_3"
-                            castShadow
-                            receiveShadow
-                            geometry={nodes.MouseThermaltakeBlack003_3.geometry}
-                            material={materials["Material.013"]}
-                        />
-                        <mesh
-                            name="MouseThermaltakeBlack003_4"
-                            castShadow
-                            receiveShadow
-                            geometry={nodes.MouseThermaltakeBlack003_4.geometry}
-                            material={materials["Material.014"]}
-                        />
-                    </group>
                     <mesh
                         name="MouseThermaltakeBlack004"
                         castShadow
@@ -122,31 +81,12 @@ export default function Model({ ...props }) {
                         scale={0.02}
                     />
                     <mesh
-                        name="MouseThermaltakeBlack005"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.MouseThermaltakeBlack005.geometry}
-                        material={materials["Material.016"]}
-                        rotation={[Math.PI / 2, 0, 0]}
-                        scale={0.02}
-                    />
-                    <mesh
                         name="MouseThermaltakeBlack007"
                         castShadow
                         receiveShadow
                         geometry={nodes.MouseThermaltakeBlack007.geometry}
                         material={materials["Material.003"]}
                         position={[0, 0.01, -0.01]}
-                        rotation={[Math.PI / 2, 0, 0]}
-                        scale={0.02}
-                    />
-                    <mesh
-                        name="MouseThermaltakeBlack008"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.MouseThermaltakeBlack008.geometry}
-                        material={materials["main body.001"]}
-                        position={[0, 0.01, -0.02]}
                         rotation={[Math.PI / 2, 0, 0]}
                         scale={0.02}
                     />
@@ -167,6 +107,15 @@ export default function Model({ ...props }) {
                         geometry={nodes.MouseThermaltakeBlack010.geometry}
                         material={materials["Material.009"]}
                         position={[-0.01, 0.01, 0]}
+                        rotation={[Math.PI / 2, 0, 0]}
+                        scale={0.02}
+                    />
+                    <mesh
+                        name="MouseThermaltakeBlack005"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.MouseThermaltakeBlack005.geometry}
+                        material={materials["Material.016"]}
                         rotation={[Math.PI / 2, 0, 0]}
                         scale={0.02}
                     />
@@ -210,6 +159,51 @@ export default function Model({ ...props }) {
                         rotation={[Math.PI / 2, 0, 0]}
                         scale={0.02}
                     />
+                    <mesh
+                        name="MouseThermaltakeBlack008"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.MouseThermaltakeBlack008.geometry}
+                        material={materials["main body.001"]}
+                        position={[0, 0.01, -0.02]}
+                        rotation={[Math.PI / 2, 0, 0]}
+                        scale={0.02}
+                    />
+                    <group
+                        name="MouseThermaltakeBlack003"
+                        position={[0, 0.01, -0.01]}
+                        rotation={[Math.PI / 2, 0, 0]}
+                        scale={0.02}
+                    >
+                        <mesh
+                            name="MouseThermaltakeBlack003_1"
+                            castShadow
+                            receiveShadow
+                            geometry={nodes.MouseThermaltakeBlack003_1.geometry}
+                            material={materials["main body"]}
+                        />
+                        <mesh
+                            name="MouseThermaltakeBlack003_2"
+                            castShadow
+                            receiveShadow
+                            geometry={nodes.MouseThermaltakeBlack003_2.geometry}
+                            material={materials["Material.007"]}
+                        />
+                        <mesh
+                            name="MouseThermaltakeBlack003_3"
+                            castShadow
+                            receiveShadow
+                            geometry={nodes.MouseThermaltakeBlack003_3.geometry}
+                            material={materials["Material.013"]}
+                        />
+                        <mesh
+                            name="MouseThermaltakeBlack003_4"
+                            castShadow
+                            receiveShadow
+                            geometry={nodes.MouseThermaltakeBlack003_4.geometry}
+                            material={materials["Material.014"]}
+                        />
+                    </group>
                     <group
                         name="MouseThermaltakeBlack015"
                         position={[0, 0.01, -0.01]}
@@ -277,18 +271,18 @@ export default function Model({ ...props }) {
                         morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
                     />
                     <skinnedMesh frustumCulled={false}
-                        name="Wolf3D_Outfit_Footwear"
-                        geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
-                        material={materials.Wolf3D_Outfit_Footwear}
-                        skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
-                    />
-                    <skinnedMesh frustumCulled={false}
                         name="Wolf3D_Teeth"
                         geometry={nodes.Wolf3D_Teeth.geometry}
                         material={materials.Wolf3D_Teeth}
                         skeleton={nodes.Wolf3D_Teeth.skeleton}
                         morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
                         morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
+                    />
+                    <skinnedMesh frustumCulled={false}
+                        name="Wolf3D_Outfit_Footwear"
+                        geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
+                        material={materials.Wolf3D_Outfit_Footwear}
+                        skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
                     />
                     <skinnedMesh frustumCulled={false}
                         name="Wolf3D_Outfit_Top"
@@ -310,22 +304,14 @@ export default function Model({ ...props }) {
                     />
                 </group>
                 <mesh
-                    name="tempat_minum"
+                    name="kamera"
                     castShadow
                     receiveShadow
-                    geometry={nodes.tempat_minum.geometry}
-                    material={materials["tempat minum"]}
-                    position={[-3.12, 3.13, -2.17]}
-                    scale={[0.98, 0.14, 0.33]}
-                />
-                <mesh
-                    name="tatakan_laptop"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.tatakan_laptop.geometry}
-                    material={materials["tatakan laptop"]}
-                    position={[-4.06, 3.37, 2.16]}
-                    scale={[0.03, 0.35, 0.03]}
+                    geometry={nodes.kamera.geometry}
+                    material={nodes.kamera.material}
+                    position={[-3.25, 5.02, -0.84]}
+                    rotation={[0, -0.52, 0]}
+                    scale={[0.02, 0.07, 0.16]}
                 />
                 <mesh
                     name="saklar"
@@ -337,33 +323,23 @@ export default function Model({ ...props }) {
                     scale={[0.33, 0.2, 0.05]}
                 />
                 <mesh
-                    name="kamera"
+                    name="tempat_minum"
                     castShadow
                     receiveShadow
-                    geometry={nodes.kamera.geometry}
-                    material={materials.Material}
-                    position={[-3.25, 5.02, -0.84]}
-                    rotation={[0, -0.52, 0]}
-                    scale={[0.02, 0.07, 0.16]}
+                    geometry={nodes.tempat_minum.geometry}
+                    material={materials["tempat minum"]}
+                    position={[-3.12, 3.13, -2.17]}
+                    scale={[0.98, 0.14, 0.33]}
                 />
                 <mesh
                     name="tatakan_kamera"
                     castShadow
                     receiveShadow
                     geometry={nodes.tatakan_kamera.geometry}
-                    material={materials["Material.015"]}
+                    material={nodes.tatakan_kamera.material}
                     position={[-3.34, 4.98, -0.91]}
                     rotation={[0, -0.52, 0]}
                     scale={[0.01, 0.07, 0.15]}
-                />
-                <mesh
-                    name="blanket"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.blanket.geometry}
-                    material={materials.blanket}
-                    position={[2.94, 2.27, 0.17]}
-                    scale={[1.87, 1.21, 3.35]}
                 />
                 <mesh
                     name="Plane"
@@ -376,6 +352,23 @@ export default function Model({ ...props }) {
                     scale={[3.19, 1, 0.77]}
                 />
                 <mesh
+                    name="lantai"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.lantai.geometry}
+                    material={materials["Material.011"]}
+                    scale={[4.36, 0.11, 4.36]}
+                />
+                <mesh
+                    name="tatakan_laptop"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.tatakan_laptop.geometry}
+                    material={materials["tatakan laptop"]}
+                    position={[-4.06, 3.37, 2.16]}
+                    scale={[0.03, 0.35, 0.03]}
+                />
+                <mesh
                     name="tembok_kanan"
                     castShadow
                     receiveShadow
@@ -384,16 +377,6 @@ export default function Model({ ...props }) {
                     position={[-4.24, 4.25, -0.01]}
                     rotation={[Math.PI / 2, 0, -Math.PI / 2]}
                     scale={[4.36, 0.11, 4.36]}
-                />
-                <mesh
-                    name="stop_kontak"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.stop_kontak.geometry}
-                    material={materials["stop kontak"]}
-                    position={[-4, 2.61, -0.52]}
-                    rotation={[-Math.PI, 0, -Math.PI]}
-                    scale={[-0.14, -0.15, -0.65]}
                 />
                 <mesh
                     name="layar_laptop"
@@ -445,24 +428,14 @@ export default function Model({ ...props }) {
                     scale={[-0.09, -0.03, 0]}
                 />
                 <mesh
-                    name="Keycaps_Keyboard"
+                    name="stop_kontak"
                     castShadow
                     receiveShadow
-                    geometry={nodes.Keycaps_Keyboard.geometry}
-                    material={materials["Keycaps Keyboard"]}
-                    position={[-2.49, 3.08, 1.62]}
-                    rotation={[1.57, -0.02, Math.PI / 2]}
-                    scale={[0.06, 0.06, 0.04]}
-                />
-                <mesh
-                    name="Keycaps_Keyboard_L"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.Keycaps_Keyboard_L.geometry}
-                    material={materials["Keycaps Keyboard L"]}
-                    position={[-3.68, 3.5, 1.57]}
-                    rotation={[1.57, -0.64, 1.57]}
-                    scale={[0.05, 0.05, 0.04]}
+                    geometry={nodes.stop_kontak.geometry}
+                    material={materials["stop kontak"]}
+                    position={[-4, 2.61, -0.52]}
+                    rotation={[-Math.PI, 0, -Math.PI]}
+                    scale={[-0.14, -0.15, -0.65]}
                 />
                 <mesh
                     name="mousepad"
@@ -494,13 +467,33 @@ export default function Model({ ...props }) {
                     scale={[0, -0.05, -0.2]}
                 />
                 <mesh
-                    name="kasur"
+                    name="Keycaps_Keyboard"
                     castShadow
                     receiveShadow
-                    geometry={nodes.kasur.geometry}
-                    material={materials.kasur}
-                    position={[2.94, 0.86, 0.33]}
-                    scale={[1.31, 0.22, 3.52]}
+                    geometry={nodes.Keycaps_Keyboard.geometry}
+                    material={materials["Keycaps Keyboard"]}
+                    position={[-2.49, 3.08, 1.62]}
+                    rotation={[1.57, -0.02, Math.PI / 2]}
+                    scale={[0.06, 0.06, 0.04]}
+                />
+                <mesh
+                    name="lampu"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.lampu.geometry}
+                    material={materials.lampu}
+                    position={[-3.9, 7.87, -0.07]}
+                    scale={[0.27, 0.22, 2.44]}
+                />
+                <mesh
+                    name="lampu_terang"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.lampu_terang.geometry}
+                    material={nodes.lampu_terang.material}
+                    position={[-4.01, 7.74, 0.06]}
+                    rotation={[Math.PI / 2, 0, 0]}
+                    scale={[0.14, 2.28, 0.14]}
                 />
                 <mesh
                     name="monitor_2"
@@ -511,34 +504,6 @@ export default function Model({ ...props }) {
                     position={[-3.64, 3.39, -0.94]}
                     rotation={[0, -0.2, 0]}
                     scale={[0.06, 0.32, 0.06]}
-                />
-                <mesh
-                    name="lampu"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.lampu.geometry}
-                    material={materials.lampu}
-                    position={[-3.9, 6.96, 0.93]}
-                    scale={[0.27, 0.22, 2.44]}
-                />
-                <mesh
-                    name="lampu_terang"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.lampu_terang.geometry}
-                    material={nodes.lampu_terang.material}
-                    position={[-4.01, 6.94, 0.9]}
-                    rotation={[Math.PI / 2, 0, 0]}
-                    scale={[0.14, 2.28, 0.14]}
-                />
-                <mesh
-                    name="minum_aer"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.minum_aer.geometry}
-                    material={materials["minum aer"]}
-                    position={[-2.64, 3.38, -2.15]}
-                    scale={[0.27, 0.39, 0.23]}
                 />
                 <mesh
                     name="tutup_minum"
@@ -580,6 +545,16 @@ export default function Model({ ...props }) {
                     scale={[-0.08, -0.12, -0.02]}
                 />
                 <mesh
+                    name="Keycaps_Keyboard_L"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Keycaps_Keyboard_L.geometry}
+                    material={materials["Keycaps Keyboard L"]}
+                    position={[-3.68, 3.5, 1.57]}
+                    rotation={[1.57, -0.64, 1.57]}
+                    scale={[0.05, 0.05, 0.04]}
+                />
+                <mesh
                     name="monitor_2001"
                     castShadow
                     receiveShadow
@@ -590,13 +565,22 @@ export default function Model({ ...props }) {
                     scale={[0.06, 0.32, 0.06]}
                 />
                 <mesh
-                    name="poto_21"
+                    name="minum_aer"
                     castShadow
                     receiveShadow
-                    geometry={nodes.poto_21.geometry}
-                    material={materials["poto 2.1"]}
-                    position={[-2.47, 6.62, 4.07]}
-                    scale={[0.71, 1.42, 0.04]}
+                    geometry={nodes.minum_aer.geometry}
+                    material={materials["minum aer"]}
+                    position={[-2.64, 3.38, -2.15]}
+                    scale={[0.27, 0.39, 0.23]}
+                />
+                <mesh
+                    name="blanket"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.blanket.geometry}
+                    material={materials.blanket}
+                    position={[2.94, 2.27, 0.17]}
+                    scale={[1.87, 1.21, 3.35]}
                 />
                 <mesh
                     name="poto_41"
@@ -607,56 +591,6 @@ export default function Model({ ...props }) {
                     position={[0.21, 5.83, 3.95]}
                     scale={[0.54, 0.63, 0.02]}
                 />
-                <mesh
-                    name="lantai"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.lantai.geometry}
-                    material={materials["Material.011"]}
-                    scale={[4.36, 0.11, 4.36]}
-                />
-                <group
-                    name="Office_chair"
-                    position={[-0.45, 0.23, 1.38]}
-                    rotation={[-Math.PI, 1.54, -Math.PI]}
-                    scale={[3.7, 3.89, 2.93]}
-                >
-                    <mesh
-                        name="Plane002"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Plane002.geometry}
-                        material={materials["chrome metal"]}
-                    />
-                    <mesh
-                        name="Plane002_1"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Plane002_1.geometry}
-                        material={materials["plastic black rough"]}
-                    />
-                    <mesh
-                        name="Plane002_2"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Plane002_2.geometry}
-                        material={materials.fabric}
-                    />
-                    <mesh
-                        name="Plane002_3"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Plane002_3.geometry}
-                        material={materials["metal painted"]}
-                    />
-                    <mesh
-                        name="Plane002_4"
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Plane002_4.geometry}
-                        material={materials["plastic smooth"]}
-                    />
-                </group>
                 <mesh
                     name="trashcan"
                     castShadow
@@ -702,6 +636,67 @@ export default function Model({ ...props }) {
                     material={materials["poto 3.1"]}
                     position={[-1.02, 5.83, 3.98]}
                     scale={[0.55, 0.64, 0.02]}
+                />
+                <mesh
+                    name="kasur"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.kasur.geometry}
+                    material={materials.kasur}
+                    position={[2.94, 0.86, 0.33]}
+                    scale={[1.31, 0.22, 3.52]}
+                />
+                <group
+                    name="Office_chair"
+                    position={[-0.45, 0.23, 1.38]}
+                    rotation={[-Math.PI, 1.54, -Math.PI]}
+                    scale={[3.7, 3.89, 2.93]}
+                >
+                    <mesh
+                        name="Plane002"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Plane002.geometry}
+                        material={materials["chrome metal"]}
+                    />
+                    <mesh
+                        name="Plane002_1"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Plane002_1.geometry}
+                        material={materials["plastic black rough"]}
+                    />
+                    <mesh
+                        name="Plane002_2"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Plane002_2.geometry}
+                        material={materials.fabric}
+                    />
+                    <mesh
+                        name="Plane002_3"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Plane002_3.geometry}
+                        material={materials["metal painted"]}
+                    />
+                    <mesh
+                        name="Plane002_4"
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Plane002_4.geometry}
+                        material={materials["plastic smooth"]}
+                    />
+                </group>
+                <mesh
+                    name="pintu_lemari"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.pintu_lemari.geometry}
+                    material={materials["pintu lemari"]}
+                    position={[-2.08, 3.59, -3.39]}
+                    rotation={[-Math.PI, 0, 0]}
+                    scale={[-0.07, -3.5, -0.91]}
                 />
                 <mesh
                     name="1"
@@ -773,6 +768,35 @@ export default function Model({ ...props }) {
                     scale={[0.6, 0.11, 0.72]}
                 />
                 <mesh
+                    name="poto_21"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.poto_21.geometry}
+                    material={materials["poto 2.1"]}
+                    position={[-2.47, 6.62, 4.07]}
+                    scale={[0.71, 1.42, 0.04]}
+                />
+                <mesh
+                    name="layar_monitor_2"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.layar_monitor_2.geometry}
+                    material={materials["layar monitor 2"]}
+                    position={[-3.33, 4.33, -0.76]}
+                    rotation={[0, -0.5, 0]}
+                    scale={[0.02, 0.63, 1.04]}
+                />
+                <mesh
+                    name="layar_monitor_1"
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.layar_monitor_1.geometry}
+                    material={materials["layar monitor 1"]}
+                    position={[-3.15, 4.33, 3.13]}
+                    rotation={[0, 0.7, 0]}
+                    scale={[0.02, 0.63, 1.04]}
+                />
+                <mesh
                     name="layar_monitor_laptop"
                     castShadow
                     receiveShadow
@@ -791,26 +815,6 @@ export default function Model({ ...props }) {
                     scale={[1, 1.49, 0.06]}
                 />
                 <mesh
-                    name="pintu_lemari"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.pintu_lemari.geometry}
-                    material={materials["pintu lemari"]}
-                    position={[-2.08, 3.59, -3.39]}
-                    rotation={[-Math.PI, 0, 0]}
-                    scale={[-0.07, -3.5, -0.91]}
-                />
-                <mesh
-                    name="layar_monitor_1"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.layar_monitor_1.geometry}
-                    material={materials["layar monitor 1"]}
-                    position={[-3.15, 4.33, 3.15]}
-                    rotation={[0, 0.7, 0]}
-                    scale={[0.02, 0.63, 1.04]}
-                />
-                <mesh
                     name="poto_11"
                     castShadow
                     receiveShadow
@@ -819,20 +823,11 @@ export default function Model({ ...props }) {
                     position={[-0.42, 7.32, 3.97]}
                     scale={[1.13, 0.71, 0.04]}
                 />
-                <mesh
-                    name="layar_monitor_2"
-                    castShadow
-                    receiveShadow
-                    geometry={nodes.layar_monitor_2.geometry}
-                    material={materials["layar monitor 2"]}
-                    position={[-3.35, 4.33, -0.77]}
-                    rotation={[0, -0.5, 0]}
-                    scale={[0.02, 0.63, 1.04]}
-                />
             </group>
         </group>
     );
 }
 
-useGLTF.preload("/isometric.glb");
+useGLTF.preload("/setup.glb");
+
 
