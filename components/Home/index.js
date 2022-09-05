@@ -2,11 +2,32 @@ import { Parallax } from "react-scroll-parallax";
 import TypeAnimation from "react-type-animation";
 import useBreakpoints from "../../hooks/useBreakpoint";
 import Waving from "../3dComponents/Waving";
+import Head from 'next/head'
+
 import { Link as Scroll } from "react-scroll"
 export default function Home({ setLoading }) {
     const { isXs, isSm, isMd, isLg, active } = useBreakpoints();
     const textChange = "hover:text-sky-700 bold dark:hover:text-white duration-300 transform ease-out  "
-    return (
+    return (<>
+        <Head>
+            <title>Swasthik Shetty</title>
+            <link rel="icon" href="/logo.png" />
+            <meta
+                name="description"
+                content="Portfolio | Swasthik Shetty | Freelance Web Developer"
+            />
+
+            <meta
+                name="keywords"
+                content="Swasthik Shetty Portfolio website"
+            />
+            <meta property="og:site_name" content="swasthikshetty.vercel.app" />
+            <meta property="og:title" content="Swasthik Shetty" />
+            <meta
+                property="og:description"
+                content="Portfolio | Swasthik Shetty | Freelance Web Developer"
+            />
+        </Head>
         <section id="home" className={`h-[100vh] select-none  cursor-pointer flex flex-col-reverse  md:flex-row overflow-hidden justify-center `}>
             <div className="border-t-2 border-slate-200 dark:border-slate-800 md:border-none  z-10   pt-20 h-lg sm:h-auto  text-center sm:text-start sm:pt-40 sm:pl-10 md:pl-20 md:pt-40 flex flex-col gap-1 md:gap-5   ">
                 <Parallax speed={0}>
@@ -45,5 +66,6 @@ export default function Home({ setLoading }) {
                 <Waving setLoading={setLoading} />
             </div>
         </section >
+    </>
     );
 }
