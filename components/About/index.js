@@ -22,8 +22,8 @@ function About() {
                     md:group-hover:-translate-x-10 transform-color ease-liner delay-100 duration-500  p-5 md:p-10 rounded-xl max-w-screen-lg mx-auto backdrop-blur bg-slate-400/10 dark:bg-slate-800/10">
                         <div>
                             Hello! My name is Swasthik Shetty and I enjoy creating things that live on the internet.
-                            My interest in development started back in 2018 when I used to play lot of video games and decided to build one, then along the way I stared exploring cybersecurity, machine learning and web development.
-                            and found my interest in web development and in 2020 I stared learning django and frontend fundamentals I got fascinated by web application and stared learning and exploring new web technologies...
+                            My interest in development started back in 2018 when I used to play lot of video games and decided to build one, then along the way I started exploring cybersecurity, machine learning and web development.
+                            and found my interest in web development and in 2020 I started learning django and frontend fundamentals I got fascinated by web application and started learning and exploring new web technologies...
                         </div >
                     </div>
                 </Fade>
