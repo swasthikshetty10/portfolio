@@ -6,7 +6,6 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
-
     if (!("theme" in localStorage)) localStorage.theme = 'dark';
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')

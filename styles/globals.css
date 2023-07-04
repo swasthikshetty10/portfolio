@@ -23,3 +23,11 @@ html {
   width: 100%;
   left: 0;
 }
+
+*::-webkit-scrollbar {
+  @apply sm:w-2 bg-sky-50 dark:bg-black;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-gray-400 dark:bg-gray-600;
+}

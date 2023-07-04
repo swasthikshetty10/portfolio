@@ -12,15 +12,18 @@ function NavBar() {
         <nav className="group bg-transperent backdrop-blur-xl px-3 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
             <div className="transform ease-linear duration-300 container flex flex-wrap justify-between items-center mx-auto">
                 <Link href="/">
-                    <a href="#" className=" flex items-center">
-                        <img src="/logo.png" className="group-hover:rotate-90 transition ease-in-out duration-1000 mr-1 h-6 sm:h-10" alt="Swasthik Shettylogo Logo" />
+                    <a href="#" className=" flex gap-1 items-center">
+                        <Image height={35} width={35} src="/logo.png" className="group-hover:rotate-90 transition ease-in-out duration-1000 mr-1 h-6 sm:h-10" alt="Swasthik Shettylogo Logo" />
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white sm:tracking-widest ">SWASTHIK SHETTY</span>
                     </a>
                 </Link>
                 <div className="flex justify-center items-center gap-3 lg:order-2">
-                    <a className="hidden lg:inline-flex items-center gap-1 font-semibold animated-underline tracking-widest  lg:after:bg-sky-700 lg:dark:after:bg-white uppercase   cursor-pointer lg:text-lg  py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-sky-700 lg:p-0 lg:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                        Resume <FiDownload />
-                    </a>
+                    <Link href="/resume.pdf" target='_blank'>
+
+                        <a target='_blank' className="hidden lg:inline-flex items-center gap-1 font-semibold animated-underline tracking-widest  lg:after:bg-sky-700 lg:dark:after:bg-white uppercase   cursor-pointer lg:text-lg  py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-sky-700 lg:p-0 lg:dark:hover:text-white dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                            Resume <FiDownload />
+                        </a>
+                    </Link>
                     <ToggleLightDark />
                     <button onClick={() => { setActive(!active) }} data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 text-sm text-slate-600 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
