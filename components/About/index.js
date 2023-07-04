@@ -66,7 +66,7 @@ function About() {
                                 <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
                                 <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Nov 2021 - Aug 2022</time>
                                 <h3 className="text-lg font-semibold ">Farmoid Robotech Pvt. Ltd.</h3>
-                                <p className="text-base font-norm opacity-75">Full Stack web Developer</p>
+                                <p className="text-base font-norm opacity-75">Full Stack Developer Intern</p>
                             </li>
 
 

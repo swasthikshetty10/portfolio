@@ -79,6 +79,15 @@ function Projects() {
                 github="https://github.com/techlifejournal/techlifejournal"
                 link="https://techlifejournal.netlify.app/"
             />
+            <ProjectsCard
+                name={<>Portfolio<span className="text-base ml-1 capitalize">(This website)</span></>}
+                tech={["Next JS", "TailwindCss", "Three JS", "Javascript"]}
+                src="/projects/portfolio.png"
+                description={`I really had fun time creating this website, used react-three-fiber to render 3d model and along the way learnt some new stuffs related to 3d modeling in blender,this website is built using Next JS and Tailwind Css framework.
+                `}
+                link="/"
+                github="https://github.com/swasthikshetty10/portfolio"
+            />
             <Link href="https://github.com/swasthikshetty10">
                 <a target="_blank" className='text-xl '>To see more, head over to my <span className="inline-flex gap-2 items-center font-semibold italic cursor-pointer ease-in-out duration-300 hover:text-sky-800 hover:dark:text-sky-300">
                     Github profile!
