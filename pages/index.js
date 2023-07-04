@@ -16,12 +16,12 @@ export default function App() {
   // disable scrolling if loading
   const mainRef = React.useRef(null);
   useEffect(() => {
-    if (loadingWave || loadingSetup) {
+    if (loadingWave) {
       document.documentElement.style.overflow = 'hidden'
     } else {
-      document.documentElement.style.overflow = 'unset'
+      document.documentElement.style.overflow = 'auto'
     }
-  }, [loadingWave, loadingSetup])
+  }, [loadingWave])
 
   return (<main>
     {(loadingWave) && <Loader />}
