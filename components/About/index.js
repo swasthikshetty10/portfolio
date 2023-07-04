@@ -21,9 +21,8 @@ function About() {
                     border-2 border-sky-600/50 hover:bg-gradient-to-l from-cyan-200/40 to-pink-100/40 dark:from-slate-900/10 dark:to-blue-900/10   ease-in-out  dark:border-slate-500/50
                     md:group-hover:-translate-x-10 transform-color ease-liner delay-100 duration-500  p-5 md:p-10 rounded-xl max-w-screen-lg mx-auto backdrop-blur bg-slate-400/10 dark:bg-slate-800/10">
                         <div>
-                            Hello! My name is Swasthik Shetty and I enjoy creating things that live on the internet.
-                            My interest in development started back in 2018 when I used to play lot of video games and decided to build one, then along the way I started exploring cybersecurity, machine learning and web development.
-                            and found my interest in web development and in 2020 I started learning django and frontend fundamentals I got fascinated by web application and started learning and exploring new web technologies...
+                            Hello! I am Swasthik Shetty, and I enjoy creating things that live on the internet. My interest in development started back in 2018 when I used to play a lot of video games. I decided to build one myself, which led me to explore various areas from game development to cybersecurity, machine learning, and web development.
+                            During this exploration, I discovered my passion for web development and in 2020, I began learning Django and frontend fundamentals. I became fascinated by web applications and started to delve deeper into learning and exploring new technologies.
                         </div >
                     </div>
                 </Fade>
@@ -31,8 +30,7 @@ function About() {
                     <div className="  delay-100
                     border-2 border-sky-600/50 hover:bg-gradient-to-l from-cyan-200/40 to-pink-100/40 dark:from-slate-900/10 dark:to-blue-900/10   ease-in-out  dark:border-slate-500/50
                     md:group-hover:translate-x-10 transform-color ease-liner  duration-500  p-5 md:p-10 rounded-xl max-w-screen-lg mx-auto backdrop-blur bg-slate-400/10 dark:bg-slate-800/10">
-                        <div>
-                            Fast-forward to today, I build full-stack websites and over the time I have gained proficiency in React JS, Next JS and Django ,My main focus these days is building web applications, contributing to open-source community and learning about blockchain and metaverse
+                        <div>Fast-forward to today, I have become proficient in building full-stack websites. I specialize in using React JS, Next JS, and NodeJS My main focus these days revolves around building web applications, contributing to the open-source community, and expanding my knowledge and exploring other domains like blockchain and the metaverse.
                         </div>
                     </div>
                 </Fade >
@@ -54,16 +52,24 @@ function About() {
                         <ol className="  border-l relative mt-10 border-slate-300 dark:border-slate-600">
                             <li className="-mt-6 mb-10 ml-4">
                                 <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
-                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Nov 2021 - Present</time>
-                                <h3 className="text-lg font-semibold ">Farmoid Robotech Pvt. Ltd.</h3>
-                                <p className="text-base font-norm opacity-75">Full Stack web Developer</p>
+                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Dec 2022 - Feb 2023</time>
+                                <h3 className="text-lg font-semibold ">Forent Inc</h3>
+                                <p className="text-base font-norm opacity-75">Software Engineer Intern </p>
                             </li>
                             <li className="-mt-6 mb-10 ml-4">
                                 <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
-                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Oct 2021 - Present</time>
-                                <h3 className="text-lg font-semibold ">Inspirante Technologies Pvt. Ltd.</h3>
-                                <p className="text-base font-norm opacity-75">Web Development Intern</p>
+                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Sept 2022 - Jan 2022</time>
+                                <h3 className="text-lg font-semibold ">Seminare Private Limited</h3>
+                                <p className="text-base font-norm opacity-75">Web Developer Intern</p>
                             </li>
+                            <li className="-mt-6 mb-10 ml-4">
+                                <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
+                                <time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">Nov 2021 - Aug 2022</time>
+                                <h3 className="text-lg font-semibold ">Farmoid Robotech Pvt. Ltd.</h3>
+                                <p className="text-base font-norm opacity-75">Full Stack web Developer</p>
+                            </li>
+
+
                         </ol>
                     </div>
                 </Slide>
@@ -85,7 +91,7 @@ function About() {
                                 <h3 className="text-lg font-semibold ">B.E (computer Science and Engineering)
                                 </h3>
                                 <p className="text-base font-norm opacity-75">NMAM Institute of Technology , Nitte</p>
-                                <p className="text-sm font-norm opacity-75">recent CGPA : 8.98/10</p>
+                                <p className="text-sm font-norm opacity-75">recent CGPA : 8.84/10</p>
                             </li>
                             <li className="-mt-6 mb-10 ml-4">
                                 <div className="absolute w-3 h-3 bg-slate-300 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-slate-600"></div>
