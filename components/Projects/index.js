@@ -108,7 +108,7 @@ function ProjectsCard(props) {
                      transform-color ease-liner   p-3 md:p-5 rounded-xl  backdrop-blur  
                     md:border-none md:bg-none
                 '>
-            <div className={` flex-auto  ${props.reverse ? "md:-translate-x-10" : "md:translate-x-10"}  w-auto  md:p-0`}>
+            <div className={` flex-auto  ${props.reverse ? "md:-translate-x-10" : "md:translate-x-10"} -z-10 w-auto  md:p-0`}>
                 <img src={props.src} alt={props.name}
                     className="md:max-w-lg md:grayscale transition-colors transform duration-100 ease-in-out group-hover:grayscale-0 "
                 />
@@ -123,7 +123,7 @@ function ProjectsCard(props) {
                     </div>
                     <div className={`${props.reverse ? "md:-mr-28 lg:-mr-26 xl:-mr-10" : "md:-ml-28 lg:-ml-26 xl:-ml-10"}
                 md:border-2 border-sky-700 /20 md:bg-gradient-to-tl md:text-sm from-cyan-200/40 to-gray-100/90 dark:from-slate-900/70 dark:to-gray-900/70   ease-in-out  dark:border-slate-500/50
-                    transform ease-liner text-justify   md:p-5  rounded-xl  mx-auto md:backdrop-blur-md `}>
+                    transform ease-liner text-justify    md:p-5  rounded-xl  mx-auto md:backdrop-blur-md `}>
                         {props.description}
                     </div>
                     <div className="inline-flex gap-3 pt-3 text-2xl ">
